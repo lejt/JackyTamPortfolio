@@ -3,7 +3,7 @@
 ## General Information
 The following project is a showcase of my projects, skillset, and resume history. It is a themed frontend React app with static assets, links, and fun animations. 
 
-<img src="/src/assets/images/homepage.jpg" height=120px"> <img  src="/src/assets/images/projectspage.jpg" height=120px overflow="hidden"> 
+<img src="src/assets/images/homepage.jpg" height=200px width=380px overflow="hidden">  <img  src="src/assets/images/projectspage.jpg" height=200px width=380px overflow="hidden"> 
 
 ## Technologies used
 * React
