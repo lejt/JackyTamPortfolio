@@ -1,0 +1,366 @@
+.Projects {
+    height: 100vh;
+    /* width: 100vw; */
+    /* height: 100%; */
+    position: relative;
+    --mercuryDelay: 10s;
+    --mercury2Delay: 15s;
+    --mercury3Delay: 25s;
+    --mercury4Delay: 10s;
+    --mercury5Delay: 30s;
+    --mercury6Delay: 15s;
+    color: white;
+    /* background: linear-gradient( to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 1%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0) 100% ); */
+}
+
+#galaxy {
+    position: relative;
+    width: 100%;
+    height: 80%;
+    transform: rotateX(75deg);
+    transform-style: preserve-3d;
+}
+#sun, .planet, .planet2, .planet3, .planet4, .planet5, .planet6 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1em;
+    height: 1em;
+    margin-top: -0.5em;
+    margin-left: -0.5em;
+    border-radius: 50%;
+    transform-style: preserve-3d;
+}
+#sun {
+    background-color: #FB7209;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* box-shadow: 0 0 100px rgba(255, 133, 2, 1);  */
+    /* box-shadow: 0 0 30px 15px #fff, 0 0 70px 30px #b400ff, 0 0 100px 60px #ff00d4; */
+    box-shadow:
+    inset 0 0 50px #fff,
+    inset 20px 0 80px rgb(255, 204, 0),
+    inset -20px 0 80px rgb(255, 38, 0),
+    inset 20px 0 300px rgb(255, 204, 0),
+    inset -20px 0 300px rgb(255, 38, 0),
+    0 0 50px #fff,
+    -10px 0 80px rgb(255, 204, 0),
+    10px 0 80px rgb(255, 38, 0);
+    /* box-shadow: 0 0 60px rgba(255, 133, 2, 0.4);  */
+    transform: rotateX(-75deg) scale(0.75,0.75);
+}
+#sun span, h2 {
+    color: rgb(167, 143, 8, 0.9);
+    font-family: 'Anonymous Pro', monospace;
+    position: absolute;
+    text-shadow: -2px -2px rgba(230, 158, 4, 0.5);
+}
+#sun span {
+    left: 50%;
+    font-size: 50px;
+    transform-origin: bottom;
+    height: 190px;
+    width: 1px;
+}
+#sun h2 {
+    top: 50%;
+    left: 46%;
+    transform: translateY(-50%);
+}
+.c1 {
+    transform: rotate(6deg);
+}
+.c2 {
+    transform: rotate(18deg);
+}
+.c3 {
+    transform: rotate(30deg);
+}
+.c4 {
+    transform: rotate(42deg);
+}
+.c5 {
+    transform: rotate(58deg);
+}
+.c6 {
+    transform: rotate(70deg);
+}
+.c7 {
+    transform: rotate(82deg);
+}
+.c8 {
+    transform: rotate(94deg);
+}
+.c9 {
+    transform: rotate(106deg);
+}
+.c10 {
+    transform: rotate(118deg);
+}
+.pos {
+    position: absolute;
+    transform-style: preserve-3d;
+    animation-name: invert;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.planet,.planet2,.planet3,.planet4,.planet5,.planet6 {
+    /* background-color: #202020; */
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    background-position: center;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.pos:hover {
+    cursor: pointer;
+    box-shadow: 0 0 60px 30px #fff, 0 0 100px 60px #7700ff, 0 0 140px 90px #37012e;
+}
+
+.orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    animation-name: orbit;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; 
+    transform-style: preserve-3d;
+}
+
+/* Animations */
+@keyframes orbit {
+    0%   { transform: rotateZ(0deg); }
+    100% { transform: rotateZ(-360deg); } 
+}
+@keyframes invert {
+    0%   { transform: rotateX(-90deg) rotateY(360deg) rotateZ(0deg); }
+    100% { transform: rotateX(-90deg) rotateY(0deg) rotateZ(0deg); } 
+}
+
+/* Orbit sizes */
+#mercury.orbit {
+  width: 5em;
+  height: 5em;
+  margin-top: -2.5em;
+  margin-left: -2.5em; 
+}
+#mercury2.orbit {
+  width: 7.5em;
+  height: 7.5em;
+  margin-top: -3.75em;
+  margin-left: -3.75em; 
+}
+#mercury3.orbit {
+  width: 10em;
+  height: 10em;
+  margin-top: -5em;
+  margin-left: -5em; 
+}
+#mercury4.orbit {
+  width: 12.5em;
+  height: 12.5em;
+  margin-top: -6.25em;
+  margin-left: -6.25em; 
+}
+#mercury5.orbit {
+  width: 15em;
+  height: 15em;
+  margin-top: -7.5em;
+  margin-left: -7.5em; 
+}
+#mercury6.orbit {
+  width: 17.5em;
+  height: 17.5em;
+  margin-top: -8.75em;
+  margin-left: -8.75em; 
+}
+/* Planet starting positions */
+#mercury .pos,#mercury2 .pos, #mercury3 .pos, #mercury4 .pos, #mercury5 .pos, #mercury6 .pos  {
+    left: 50%;
+    /* border: solid 3px red; */
+} 
+/* Planet animation durations */
+/* #mercury.orbit, #mercury .pos, #mercury2.orbit, #mercury2 .pos, #mercury3.orbit, #mercury3 .pos, #mercury4.orbit, #mercury4 .pos {
+    animation-duration: 30s;
+} */
+#mercury.orbit, #mercury .pos {
+    animation-duration: var(--mercuryDelay);
+}
+#mercury2.orbit, #mercury2 .pos {
+    animation-duration: var(--mercury2Delay);
+}
+#mercury3.orbit, #mercury3 .pos {
+    animation-duration: var(--mercury3Delay);
+}
+#mercury4.orbit, #mercury4 .pos {
+    animation-duration: var(--mercury4Delay);
+}
+#mercury5.orbit, #mercury5 .pos {
+    animation-duration: var(--mercury5Delay);
+}
+#mercury6.orbit, #mercury6 .pos {
+    animation-duration: var(--mercury6Delay);
+}
+
+/* Planet starting positions */
+#mercury .planet, #mercury2 .planet2, #mercury3 .planet3, #mercury4 .planet4 {
+  /* left: 50%; */
+} 
+/* Planet animation durations */
+/* #mercury.orbit, #mercury2.orbit, #mercury3.orbit, #mercury4.orbit {
+  animation-duration: 30s;
+} */
+#mercury.orbit {
+    animation-duration: var(--mercuryDelay);
+}
+#mercury2.orbit {
+    animation-duration: var(--mercury2Delay);
+}
+#mercury3.orbit {
+    animation-duration: var(--mercury3Delay);
+}
+#mercury4.orbit {
+    animation-duration: var(--mercury4Delay);
+}
+#mercury5.orbit {
+    animation-duration: var(--mercury5Delay);
+}
+#mercury6.orbit {
+    animation-duration: var(--mercury6Delay);
+}
+
+/* Planet sizes */
+#sun {
+    font-size: 24em;
+}
+#mercury, #mercury2, #mercury3, #mercury4, #mercury5, #mercury6 {
+    font-size: 7em;
+}
+/* Planet shadow animations */
+#mercury .planet, #mercury2 .planet2, #mercury3 .planet3, #mercury4 .planet4, #mercury5 .planet5, #mercury6 .planet6 {
+    animation-name: shadow-mercury;
+}
+#mercury .planet {
+    animation-duration: var(--mercuryDelay);
+}
+#mercury2 .planet2 {
+    animation-duration: var(--mercury2Delay);
+}
+#mercury3 .planet3 {
+    animation-duration: var(--mercury3Delay);
+}
+#mercury4 .planet4 {
+    animation-duration: var(--mercury4Delay);
+}
+#mercury5 .planet5 {
+    animation-duration: var(--mercury5Delay); 
+}
+#mercury6 .planet6 {
+    animation-duration: var(--mercury6Delay); 
+}
+
+@keyframes shadow-mercury {
+    0% {
+        box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.8);
+        
+        /* TOP */ }
+
+    25% {
+        box-shadow: inset 16px 0 8px rgba(0, 0, 0, 0.8);
+        /* box-shadow: 10px -10px  rgba(0,0,0,1); */
+        /* LEFT */ }
+
+    40% {
+        box-shadow: inset 40px -40px 12px rgba(0, 0, 0, 0.8);
+        /* BOTTOM */ }
+    48% {
+        box-shadow: inset 3px -50px 16px rgba(0, 0, 0, 0.8);
+        /* box-shadow: inset 40px -20px 16px rgba(0, 0, 0, 1); */
+        /* BOTTOM */ }
+
+    52% {
+        box-shadow: inset -3px -50px 16px rgba(0, 0, 0, 0.8);
+        /* box-shadow: inset -40px -20px 16px rgba(0, 0, 0, 1); */
+        /* BOTTOM */ }
+    60% {
+        box-shadow: inset -40px -40px 12px rgba(0, 0, 0, 0.8);
+        /* BOTTOM */ }
+    75% {
+        box-shadow: inset -16px 0 8px rgba(0, 0, 0, 0.8);
+        /* RIGHT */ }
+        
+    100% {
+        box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.8);
+        /* TOP */ }    
+}
+
+.planet {
+    background-image: url(../../assets/images/SimonPlanet.jpg); 
+}
+.planet2 {
+    background-image: url(../../assets/images/PastafyPlanet.jpg); 
+}
+.planet3 {
+    background-image: url(../../assets/images/UnionPlanet.jpg);
+}
+.planet4 {
+    background-image: url(../../assets/images/UPGDPlanet.jpg); 
+}
+.planet5 {
+    background-image: url(../../assets/images/InvestMintPlanet.jpg); 
+}
+.planet6 {
+    background-image: url(../../assets/images/AmazonPlanet.jpeg); 
+}
+
+.msg {
+    font-family: 'Anonymous Pro', monospace; 
+    position: absolute;
+    bottom: 5em;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    text-shadow: 2px 2px #fc0202;
+}
+.projects__type {
+    overflow: hidden;
+    border-right: .10em solid orange;
+    white-space: nowrap;
+    width: 0;
+    animation: 
+        projectTyping 1s steps(10, end) forwards;
+}
+@keyframes projectTyping {
+    from { width: 0 }
+    to { width: 100% }
+}
+.projects__title {
+    font-size: 4em;
+}
+.projects__info {
+    font-size: 2em;
+}
+.projects__link {
+    color: white;
+    padding: 10px 0;
+    /* margin-bottom: 30px; */
+    margin: 0 10px 30px;
+    width: 200px;
+}
+.projects__deploy {
+    background-color: #93027b;
+}
+.projects__github {
+    background-color: #930252;
+}
+.projects__link:hover {
+    animation: shakeBtn 75ms infinite;
+    animation-timing-function: linear; 
+}
+@keyframes shakeBtn {
+    0% { transform: rotate(2deg); }
+    50% { transform: rotate(-2deg); }
+    100% { transform: rotate(2deg); }
+}

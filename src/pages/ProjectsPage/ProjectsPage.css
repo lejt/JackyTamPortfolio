@@ -1,0 +1,10 @@
+.projects__page {
+    background: url(../../assets/images/space_constellation.webp);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    position: relative;
+    box-shadow: inset 0px 0px 10px 5px rgb(0, 0, 0);
+}

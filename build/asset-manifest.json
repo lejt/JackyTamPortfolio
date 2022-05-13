@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a93c7aee.css",
+    "main.js": "/static/js/main.68d31d9f.js",
+    "static/media/space_constellation.webp": "/static/media/space_constellation.78a7703e8c03710a663d.webp",
+    "static/media/space_color.jpeg": "/static/media/space_color.0090bf04d9d779fd1617.jpeg",
+    "static/media/InvestMintPlanet.jpg": "/static/media/InvestMintPlanet.2fc6b3216e3e3bf8303e.jpg",
+    "static/media/UPGDPlanet.jpg": "/static/media/UPGDPlanet.053bee73b601bfc48d0b.jpg",
+    "static/media/JFT_headShot.png": "/static/media/JFT_headShot.70b743604eed0cbb2079.png",
+    "static/media/gundam.jpg": "/static/media/gundam.42dfa77742e64bc97215.jpg",
+    "static/media/golf.jpeg": "/static/media/golf.e28c32d79b445dee56c7.jpeg",
+    "static/media/UnionPlanet.jpg": "/static/media/UnionPlanet.7f5ddf6068a52e2be16b.jpg",
+    "static/media/SimonPlanet.jpg": "/static/media/SimonPlanet.41beae5d2501dd6e9763.jpg",
+    "static/media/mechproject.jpeg": "/static/media/mechproject.e0a11e1797422aefb01c.jpeg",
+    "static/media/kickboxing.jpeg": "/static/media/kickboxing.4f7941a881bea32180b5.jpeg",
+    "index.html": "/index.html",
+    "main.a93c7aee.css.map": "/static/css/main.a93c7aee.css.map",
+    "main.68d31d9f.js.map": "/static/js/main.68d31d9f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a93c7aee.css",
+    "static/js/main.68d31d9f.js"
+  ]
+}

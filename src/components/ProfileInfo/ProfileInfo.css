@@ -1,0 +1,227 @@
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+.profile {
+    margin: 0;
+    background: url(../../assets/images/space_color.jpeg);
+    background-size: cover;
+    height: 100vh;
+    /* mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0)); */
+    /* mask-size: 50% 100%; */
+    box-shadow:inset 0px 0px 10px 5px rgb(0, 0, 0);
+}
+.profile__container {
+    color: white;
+    font-family: 'Anonymous Pro', monospace;  
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profile__headshot {
+    height: 300px;
+    border-radius: 50%;
+    clip-path: polygon(0% 0%, 88% 9%, 100% 75%, 83% 85%, 75% 100%, 37% 91%, 0% 75%);
+    /* box-shadow: 0px 10px 40px 20px rgba(1, 235, 165, 0.42); */
+}
+.profile__headshot__floating {
+    animation-name: head_float;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+@keyframes head_float {
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, 15px); }
+    to   { transform: translate(0, -0px); }    
+}
+
+.profile__intro {
+    /* border: 2px solid lightblue; */
+    width: 50%;
+    padding: 30px;
+    margin-left: 30px;
+}
+.profile__desc {
+    border: 1px solid rgb(182, 182, 182);
+    border-radius: 5px;
+    background-color: #262626;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+.profile__desc__floating {
+    animation-name: desc_float;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+@keyframes desc_float {
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, 5px); }
+    to   { transform: translate(0, -0px); }    
+}
+.profile__name {
+    color: rgb(255, 153, 0);
+}
+.profile__type {
+    /* font-size: 2.5rem; */
+    font-size: 2vw;
+    overflow: hidden;
+    border-right: .15em solid orange;
+    white-space: nowrap;
+    width: 0;
+    animation: 
+        typing 0.5s steps(10, end) forwards;
+}
+.profile__type2 {
+    /* font-size: 1.8rem;  */
+    font-size: 1.3vw;
+    overflow: hidden;
+    border-right: .15em solid orange;
+    white-space: nowrap; 
+    width: 0;
+    animation: 
+        typing 0.5s steps(25, end) forwards;
+        animation-delay: 1s;
+}
+.profile__type3 {
+    /* font-size: 1.8rem;  */
+    font-size: 1.3vw;
+    overflow: hidden;
+    border-right: .15em solid orange;
+    white-space: nowrap; 
+    width: 0;
+    animation: 
+        typing 0.5s steps(25, end) forwards;
+        animation-delay: 2s;
+}
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+.profile__links ul {
+    display: flex;
+    justify-content: center;
+}
+.profile__links li {
+    list-style: none;
+}
+.profile__links a {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(155, 112, 36);
+    margin: 0 10px;
+    display: block;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #fff;
+}
+.profile__icon {
+    position: relative;
+    color: #262626;
+    transition: .5s;
+    width: 25px;
+    height: 25px;
+    margin: 10px 0 0 10px;
+    z-index: 3;
+}
+.profile__links a:hover .profile__icon {
+    color: #fff;
+    transform: rotateY(360deg);
+}
+.profile__links a:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f00;
+    transition: .5s;
+    z-index: 2;
+}
+.profile__links a:hover:before {
+    top: 0;
+}
+.profile__links li:nth-child(1) a:before{
+    background: #cb3040;
+}
+
+.profile__links li:nth-child(2) a:before{
+    background: #3b5999;
+}
+
+.profile__links li:nth-child(3) a:before {
+    background: #010101;
+} 
+.profile__icon__float {
+    animation-name: head_float;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.5s;
+}
+.profile__icon__float2 {
+    animation-name: head_float;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-delay: 1s;
+}
+.profile__icon__float3 {
+    animation-name: head_float;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-delay: 1.5s;
+}
+
+.arrows {
+	width: 60px;
+	height: 72px;
+	position: absolute;
+	left: 50%;
+	margin-left: -30px;
+	bottom: 20px;
+}
+
+.arrows path {
+	stroke: #2994D1;
+	fill: transparent;
+	stroke-width: 1px;	
+	animation: arrow 2s infinite;
+	-webkit-animation: arrow 2s infinite; 
+}
+
+@keyframes arrow
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+@-webkit-keyframes arrow /*Safari and Chrome*/
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+.arrows path.a1 {
+	animation-delay:-1s;
+	-webkit-animation-delay:-1s; /* Safari 和 Chrome */
+}
+
+.arrows path.a2 {
+	animation-delay:-0.5s;
+	-webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
+}
+
+.arrows path.a3 {	
+	animation-delay:0s;
+	-webkit-animation-delay:0s; /* Safari 和 Chrome */
+}

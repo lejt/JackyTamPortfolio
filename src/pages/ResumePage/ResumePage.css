@@ -1,0 +1,7 @@
+.resume__page {
+    background: url("../../assets/images/space_constellation.webp");
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
